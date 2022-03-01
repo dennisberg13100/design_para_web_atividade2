@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <head>
+    <!-- Esta tag indica que o nosso site é resposivo e que o dispositivo não deve dar zoom no conteudo-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcenaria</title>
     <style>
         @import url("style.css");
     </style>
     <body>
+        <!-- esta primeira div foi uma das útimas coisas adicionadas -->
+        <!-- ela engloba todo site para centralizar o conteúdo em telas acima de 1023 px -->
         <div>
             <header>
                 <div id="logo">
@@ -17,6 +20,7 @@
                     <label for="hamburger">&#9776;</label>
                     <input type="checkbox" id="hamburger"/>
                     <div id="hamitems">
+                        <!-- O site é uma SPA (single page aplicatio), os links levam às respectivas sections -->
                         <a href="#inicio">Início</a>
                         <a href="#sobre">Sobre</a>
                         <a href="#meus_trabalhos">Meus Trabalhos</a>
@@ -31,6 +35,8 @@
                 </div>
             </section>
             <section id="sobre">
+                <!-- Tanto a section sobre como contatos utilizam os mesmo estilo -->
+                <!-- Para reaproveitar o código ambas foi criada a classe light-box (caixa clara)-->
                 <div class="light-box">
                     <article>
                         <h2>Sobre mim:</h2>
@@ -69,6 +75,8 @@
             <section id="contato" class="light-box">
                 <h2>Contato:</h2>
                 <form>
+                    <!-- Optei por separar os inputs em div's ao invéz de utilizar a tag br -->
+                    <!-- Utilizando div's o codigo fica mais flexivel para alterações via CSS -->
                     <div>
                         <label>Nome:</label>
                         <input type="text" name="nome">
@@ -87,12 +95,11 @@
                     <div>
                         <input type="submit" value="enviar">
                     </div> 
-                </form>
-                
+                </form>     
             </section>
             <footer>
-                <p>Site criado por <a>Dennis van den Berg</a></p>
-                <p.>Design para Web - UAM</p>
+                <p>Site criado por <strong>Dennis van den Berg</strong></p>
+                <p>Design para Web - UAM</p>
             </footer>
         </div>
     </body>

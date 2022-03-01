@@ -1,10 +1,9 @@
 
 /*
- * Marrom escuro: #252223
- * Marrom: #4F3E38
- * Marrom claro: #A8846F
- * Cinza: #D5D3D4
+ * A formatação das tags gerais (body e h{1..6}) procuro manter no topo
+ * para facilitar a formatação
  */
+ 
 body {
     background: #bc834d;
     color: #252223;
@@ -30,6 +29,10 @@ header {
     padding-bottom: 0px;
 }
 
+/*
+ * Por algum motivo algumas sectios estavam ultrapassando a largura da tela 
+ */
+
 section {
     max-width: 100%;
 }
@@ -40,9 +43,9 @@ section {
 #hamitems {
     position: absolute;
     width: 200px;
-    margin-left: -100px;
-    box-shadow: -3px 3px 5px #252223;
-}
+    margin-left: -100px; /* Trapaça para mover um bloco para a esquerda */
+    /* box-shadow: deslocamento horizontal, vetical, desfoque e cor */
+    box-shadow: -3px 3px 5px #252223; }
 
 #hamitems a {
     box-sizing: border-box;
@@ -64,10 +67,12 @@ section {
     font-size: 48px;
 }
 
+/* Esconder o check-box */
 #hamburger {
     display: none;
 }
 
+/* Esconder o menu */
 #hamitems {
     display: none;
 }
@@ -85,9 +90,14 @@ section {
     text-shadow: 2px 2px 2px #252223;
 }
 
+/*  
+ * Essa div tem apenas um fundo preto transparente
+ * Ela tem como objetivo dar mais destaque a frase de impacto  
+ */
+
 #inicio div {
     padding: 25px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.2); /* (red, green, blue, alpha) */
 }
 
 #inicio div h1 {
@@ -98,8 +108,8 @@ section {
     display: flex;
 }
 
-
 .light-box {
+    /* margem: vertical horizontal */
     margin: 40px 20px;
     background-color: #D5D3D4;
     padding: 20px;
@@ -149,19 +159,8 @@ input, textarea {
     width: fit-content;
 }
 
-footer {
-    background-color: #252223;
-    text-align: center;
-    color: #D5D3D4;
-    padding: 10px;
-}
-
-footer p {
-    margin: 0px;
-}
-
 /* 
- * Meus trabalhos realizado com display grid seguindo instruções do site: 
+ * "Meus trabalhos" realizado com display grid seguindo instruções do site: 
  * https://www.w3schools.com/css/css_grid.asp
  */
 
@@ -175,6 +174,7 @@ footer p {
 
 .grid-container {
     display:grid;
+    /* cada 'auto' se refere a uma coluna, que neset caso ocupa o tamanho máximo disponível */
     grid-template-columns: auto auto;
     padding: 10px;
     gap: 10px;
@@ -185,6 +185,17 @@ footer p {
     max-width: 250px;
     border-radius: 20px;
     box-shadow: 2px 2px 5px #000;
+}
+
+footer {
+    background-color: #252223;
+    text-align: center;
+    color: #D5D3D4;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0px;
 }
 
 /*
