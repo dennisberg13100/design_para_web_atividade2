@@ -30,6 +30,10 @@ header {
     padding-bottom: 0px;
 }
 
+section {
+    max-width: 100%;
+}
+
 /* Menu de Hamburger seguindo tutorial on-line:
  * https://alvarotrigo.com/blog/hamburger-menu-css/
  */
@@ -82,7 +86,7 @@ header {
 }
 
 #inicio div {
-    padding: 50px;
+    padding: 25px;
     background-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -189,10 +193,61 @@ footer p {
  */
 
 @media  only screen and (min-width: 680px) {
-    header nav ul  a:hover{
-        text-decoration: none;
-        color:#D5D3D4;
+    
+    /*
+     * A maior alteração ocorrerá aqui no menu de navegação
+     * Para transformar o menu de hamburger em um menu normal
+     */
+
+    header {
+        margin-top: 0px;
+        padding-top: 0px;
     }
+
+    #logo {
+        padding-top: 10px;
+    }
+
+    #hamnav label, #hamnav input {
+        display: none;
+    }
+
+    #hamitems {
+        height: 100%;
+        display: flex;
+        position: static;
+        margin: 0;
+        padding: 0;
+        width: auto;
+        box-shadow: none; 
+        text-align: center;  
+        align-items: center; 
+    }
+
+    #hamitems a {
+        display: flex;
+        border: 0px;
+        background: none;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hamitems a:hover {
+        background-color: #D5D3D4;
+    }
+
+    h1 {
+        font-size: 46px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    /*
+     * Como há mais espaço podemos mostrar a imagem da section "Sobre"
+     */
 
     #sobre div img {
         display: block;
@@ -201,5 +256,54 @@ footer p {
         border-radius: 5px;
         max-width: 100%;
         height: auto;
+    }
+
+    /*
+     * Em telas maiores podemos mostrar agora três imagens em cada linha 
+     * Na section "Meus Trabalhos"
+     */
+
+     .grid-container {
+        grid-template-columns: auto auto auto;
+    }
+
+    /*
+     * A sectio de contato está muito grande com os input esticados
+     * Irei limitar seu tamanho máximo a 600px e margens laterais no auto
+     * para centralizar o conteudo 
+     */
+
+    #contato {
+        max-width: 600px;
+        margin: 40px auto;
+    }
+}
+
+
+@media  only screen and (min-width: 1023px) {
+
+    body div {
+        max-width: 1024px;
+        margin: auto;
+        background-color: #bc834d;
+    }
+    /*
+     * Como em telas muito grandes o site ficava "vazio"
+     * resolvi centralizar o conteudo e dar uma cor para o fundo
+     */
+    body {
+        background-color: #000;
+    }
+
+    #logo {
+        margin: 0px;
+    }
+
+    .grid-container, .grid-items {
+        background-color: #252223;
+    }
+
+    #contato div {
+        background-color: #D5D3D4;
     }
 }
